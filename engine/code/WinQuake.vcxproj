@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6BF8FC22-9003-40F6-BF03-68A262C348BA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UQE-Quake</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UQE-Quake</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(TargetDir)/$(ProjectName).tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;GLQUAKE</PreprocessorDefinitions>
+      <PrecompiledHeaderOutputFile>.\Release\WinQuake.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Release\UQE-Quake.exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;opengl32.lib;winmm.lib;wsock32.lib;glu32.lib</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(TargetDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(TargetDir)/$(ProjectName).tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <PrecompiledHeaderOutputFile>.\Debug\WinQuake.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;GLQUAKE</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Debug\UQE-Quake.exe</OutputFile>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;opengl32.lib;winmm.lib;wsock32.lib;glu32.lib</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(TargetDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\jpeg-6\jcapimin.c" />
+    <ClCompile Include="..\jpeg-6\jccoefct.c" />
+    <ClCompile Include="..\jpeg-6\jccolor.c" />
+    <ClCompile Include="..\jpeg-6\jcdctmgr.c" />
+    <ClCompile Include="..\jpeg-6\jchuff.c" />
+    <ClCompile Include="..\jpeg-6\jcinit.c" />
+    <ClCompile Include="..\jpeg-6\jcmainct.c" />
+    <ClCompile Include="..\jpeg-6\jcmarker.c" />
+    <ClCompile Include="..\jpeg-6\jcmaster.c" />
+    <ClCompile Include="..\jpeg-6\jcomapi.c" />
+    <ClCompile Include="..\jpeg-6\jcparam.c" />
+    <ClCompile Include="..\jpeg-6\jcphuff.c" />
+    <ClCompile Include="..\jpeg-6\jcprepct.c" />
+    <ClCompile Include="..\jpeg-6\jcsample.c" />
+    <ClCompile Include="..\jpeg-6\jctrans.c" />
+    <ClCompile Include="..\jpeg-6\jdapimin.c" />
+    <ClCompile Include="..\jpeg-6\jdapistd.c" />
+    <ClCompile Include="..\jpeg-6\jdatadst.c" />
+    <ClCompile Include="..\jpeg-6\jdatasrc.c" />
+    <ClCompile Include="..\jpeg-6\jdcoefct.c" />
+    <ClCompile Include="..\jpeg-6\jdcolor.c" />
+    <ClCompile Include="..\jpeg-6\jddctmgr.c" />
+    <ClCompile Include="..\jpeg-6\jdhuff.c" />
+    <ClCompile Include="..\jpeg-6\jdinput.c" />
+    <ClCompile Include="..\jpeg-6\jdmainct.c" />
+    <ClCompile Include="..\jpeg-6\jdmarker.c" />
+    <ClCompile Include="..\jpeg-6\jdmaster.c" />
+    <ClCompile Include="..\jpeg-6\jdpostct.c" />
+    <ClCompile Include="..\jpeg-6\jdsample.c" />
+    <ClCompile Include="..\jpeg-6\jdtrans.c" />
+    <ClCompile Include="..\jpeg-6\jerror.c" />
+    <ClCompile Include="..\jpeg-6\jfdctflt.c" />
+    <ClCompile Include="..\jpeg-6\jidctflt.c" />
+    <ClCompile Include="..\jpeg-6\jmemmgr.c" />
+    <ClCompile Include="..\jpeg-6\jmemnobs.c" />
+    <ClCompile Include="..\jpeg-6\jutils.c" />
+    <ClCompile Include="cd_win.c" />
+    <ClCompile Include="cl_demo.c" />
+    <ClCompile Include="cl_input.c" />
+    <ClCompile Include="cl_main.c" />
+    <ClCompile Include="cl_parse.c" />
+    <ClCompile Include="cl_tent.c" />
+    <ClCompile Include="cmd.c" />
+    <ClCompile Include="common.c" />
+    <ClCompile Include="conproc.c" />
+    <ClCompile Include="console.c" />
+    <ClCompile Include="crc.c" />
+    <ClCompile Include="cvar.c" />
+    <ClCompile Include="gl_draw.c" />
+    <ClCompile Include="gl_fullbright.c" />
+    <ClCompile Include="gl_mesh.c" />
+    <ClCompile Include="gl_model.c" />
+    <ClCompile Include="gl_refrag.c" />
+    <ClCompile Include="gl_rlight.c" />
+    <ClCompile Include="gl_rmain.c" />
+    <ClCompile Include="gl_rmisc.c" />
+    <ClCompile Include="gl_rsurf.c" />
+    <ClCompile Include="gl_screen.c" />
+    <ClCompile Include="gl_test.c" />
+    <ClCompile Include="gl_vidnt.c" />
+    <ClCompile Include="gl_warp.c" />
+    <ClCompile Include="host.c" />
+    <ClCompile Include="host_cmd.c" />
+    <ClCompile Include="in_win.c" />
+    <ClCompile Include="keys.c" />
+    <ClCompile Include="mathlib.c" />
+    <ClCompile Include="menu.c" />
+    <ClCompile Include="net_dgrm.c" />
+    <ClCompile Include="net_loop.c" />
+    <ClCompile Include="net_main.c" />
+    <ClCompile Include="net_vcr.c" />
+    <ClCompile Include="net_win.c" />
+    <ClCompile Include="net_wins.c" />
+    <ClCompile Include="net_wipx.c" />
+    <ClCompile Include="pr_cmds.c" />
+    <ClCompile Include="pr_edict.c" />
+    <ClCompile Include="pr_exec.c" />
+    <ClCompile Include="r_part.c" />
+    <ClCompile Include="sbar.c" />
+    <ClCompile Include="snd_dma.c" />
+    <ClCompile Include="snd_fmod.c" />
+    <ClCompile Include="snd_mem.c" />
+    <ClCompile Include="snd_mix.c" />
+    <ClCompile Include="snd_win.c" />
+    <ClCompile Include="sv_main.c" />
+    <ClCompile Include="sv_move.c" />
+    <ClCompile Include="sv_phys.c" />
+    <ClCompile Include="sv_user.c" />
+    <ClCompile Include="sys_win.c" />
+    <ClCompile Include="unzip.c" />
+    <ClCompile Include="vid_gamma.c" />
+    <ClCompile Include="view.c" />
+    <ClCompile Include="wad.c" />
+    <ClCompile Include="world.c" />
+    <ClCompile Include="zone.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="quake.bmp" />
+    <None Include="quake.ico" />
+    <None Include="progdefs.q1" />
+    <None Include="progdefs.q2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="winquake.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\jpeg-6\jchuff.h" />
+    <ClInclude Include="..\jpeg-6\jconfig.h" />
+    <ClInclude Include="..\jpeg-6\jdct.h" />
+    <ClInclude Include="..\jpeg-6\jdhuff.h" />
+    <ClInclude Include="..\jpeg-6\jerror.h" />
+    <ClInclude Include="..\jpeg-6\jinclude.h" />
+    <ClInclude Include="..\jpeg-6\jmemsys.h" />
+    <ClInclude Include="..\jpeg-6\jmorecfg.h" />
+    <ClInclude Include="..\jpeg-6\jpegint.h" />
+    <ClInclude Include="..\jpeg-6\jpeglib.h" />
+    <ClInclude Include="..\jpeg-6\jversion.h" />
+    <ClInclude Include="anorm_dots.h" />
+    <ClInclude Include="anorms.h" />
+    <ClInclude Include="bspfile.h" />
+    <ClInclude Include="cdaudio.h" />
+    <ClInclude Include="client.h" />
+    <ClInclude Include="cmd.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="conproc.h" />
+    <ClInclude Include="console.h" />
+    <ClInclude Include="crc.h" />
+    <ClInclude Include="cvar.h" />
+    <ClInclude Include="draw.h" />
+    <ClInclude Include="glext.h" />
+    <ClInclude Include="gl_fullbright.h" />
+    <ClInclude Include="gl_model.h" />
+    <ClInclude Include="gl_warp_sin.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="glquake.h" />
+    <ClInclude Include="input.h" />
+    <ClInclude Include="keys.h" />
+    <ClInclude Include="mathlib.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="modelgen.h" />
+    <ClInclude Include="net.h" />
+    <ClInclude Include="net_dgrm.h" />
+    <ClInclude Include="net_loop.h" />
+    <ClInclude Include="net_vcr.h" />
+    <ClInclude Include="net_wins.h" />
+    <ClInclude Include="net_wipx.h" />
+    <ClInclude Include="pr_comp.h" />
+    <ClInclude Include="progdefs.h" />
+    <ClInclude Include="progs.h" />
+    <ClInclude Include="protocol.h" />
+    <ClInclude Include="quakedef.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="render.h" />
+    <ClInclude Include="sbar.h" />
+    <ClInclude Include="screen.h" />
+    <ClInclude Include="server.h" />
+    <ClInclude Include="snd_fmod.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="spritegn.h" />
+    <ClInclude Include="sys.h" />
+    <ClInclude Include="unzip.h" />
+    <ClInclude Include="vid.h" />
+    <ClInclude Include="vid_gamma.h" />
+    <ClInclude Include="view.h" />
+    <ClInclude Include="wad.h" />
+    <ClInclude Include="wglext.h" />
+    <ClInclude Include="winquake.h" />
+    <ClInclude Include="world.h" />
+    <ClInclude Include="zone.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
